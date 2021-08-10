@@ -492,26 +492,40 @@ class EditDriverGUI:
     # Suit
     # Values for GUI
     suit_body = ['Female', 'Male']
-    suit_design = ['Slick', 'Dragon', 'Asymmetric', 'Classic', 'Royal', 'Oil']
+    suit_design = ['Asymmetric', 'Classic', 'Dragon', 'Honor', 'Oil', 'Roads',
+                   'Royal', 'Satelite', 'Sidelines', 'Slick', 'Split',
+                   'Stripes']
     # Values for replay file
     suit_driverskin = {'Female': 'driverskin-classic-f',
                        'Male': 'driverskin-classic-m'}
     suit_driverskinlivery = {
         'Female': {
-            'Slick': 'driverskinmaterial-6-f-1',
-            'Dragon': 'driverskinmaterial-arrows-f-2',
             'Asymmetric': 'driverskinmaterial-asymmetric-f-1',
             'Classic': 'driverskinmaterial-classic-f-0',
+            'Dragon': 'driverskinmaterial-arrows-f-2',
+            'Honor': 'driverskinmaterial-9-f-1',
+            'Oil': 'driverskinmaterial-oil-f-3',
+            'Roads': 'driverskinmaterial-7-f-1',
             'Royal': 'driverskinmaterial-diagonals-f-1',
-            'Oil': 'driverskinmaterial-oil-f-3'
+            'Satelite': 'driverskinmaterial-satellite-f-3',
+            'Sidelines': 'driverskinmaterial-10-f-1',
+            'Slick': 'driverskinmaterial-6-f-1',
+            'Split': 'driverskinmaterial-split-f-1',
+            'Stripes': 'driverskinmaterial-stripes-f-1'
         },
         'Male': {
-            'Slick': 'driverskinmaterial-6-m-1',
-            'Dragon': 'driverskinmaterial-arrows-m-2',
             'Asymmetric': 'driverskinmaterial-asymmetric-m-1',
             'Classic': 'driverskinmaterial-classic-m-0',
+            'Dragon': 'driverskinmaterial-arrows-m-2',
+            'Honor': 'driverskinmaterial-9-m-1',
+            'Oil': 'driverskinmaterial-oil-m-3',
+            'Roads': 'driverskinmaterial-7-m-1',
             'Royal': 'driverskinmaterial-diagonals-m-1',
-            'Oil': 'driverskinmaterial-oil-m-3'
+            'Satelite': 'driverskinmaterial-satellite-m-3',
+            'Sidelines': 'driverskinmaterial-10-m-1',
+            'Slick': 'driverskinmaterial-6-m-1',
+            'Split': 'driverskinmaterial-split-m-1',
+            'Stripes': 'driverskinmaterial-stripes-m-1'
         }
     }
     # Reverse to get the GUI values from the replay value
