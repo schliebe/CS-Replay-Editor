@@ -1,6 +1,8 @@
 # CS Replay Editor
 **Editor for Circuit Superstars replay files.**\
-*Version 1.0.0*
+*Version 1.0.1*
+
+![CS Replay Editor](media/readme_header.gif)
 
 ## What is this?
 This is a simple editor for replays of the game [**Circuit Superstars**](https://www.originalfiregames.com/circuit-superstars "Circuit Superstars") ([Steam](https://store.steampowered.com/app/1097130/Circuit_Superstars/ "Circuit Superstars on Steam")).\
@@ -9,7 +11,7 @@ This editor might be most useful for content creators or anyone else that wants 
 You can edit existing replays, which are saved as a pair of .replay and .header files.
 It is only possible to make cosmetic changes.
 
-The editor is working for the current Early Access version `v.0.3.0`.
+The editor is working for the current Early Access version `v.0.4.0`.
 
 ### What you can change
 - Names of drivers\
@@ -31,7 +33,8 @@ Suits, helmets, cars and designs can only be selected out of the options availab
 
 ### Planned features
 - Possibility to load and save drivers and cars as presets
-- Complete list of designs and their names
+- Complete list of designs and their names\
+  (There is no complete list of names available at the moment. Changes are still possible as well)
 - Improved interface
 - Design preview (maybe even with the selected colors)
 
@@ -41,8 +44,16 @@ To use the editor, just type the following into the command-line in the same dir
 ```shell
 python CS_Replay_Editor.py
 ```
-The main window should now open. You can also try to double click the script but there is no guarantee this works.
+The main window should now open. You can also try to double click the script but there is no guarantee this works.\
+Select the path in which the replay files you want to edit can be found by clicking the `Change` button on the top right corner. After that select the filename of the replay in the list and click `Edit` to edit the file. You can now edit each driver and car and save the changes to a new file afterwards.\
+Note that each replay consists of two files that will always be saved together.
 
 ### Changelog
+#### [1.0.1] - 2021-08-25
+- Added and changed car and suit designs and their names\
+  (Including additions and changes for Early Access version `v.0.4.0` of the game)
+- Fixed replay reloading after closing the replay edit window
+- Fixed bugs when closing the driver and car edit windows
+- Improved the README
 #### [1.0.0] - 2021-08-04
 - First release
