@@ -352,6 +352,7 @@ class GUI:
             self.root.withdraw()
             edit.window.wait_window()
             self.root.deiconify()
+            self.load_replays()
 
 
 class EditGUI:
