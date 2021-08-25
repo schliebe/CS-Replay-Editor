@@ -745,7 +745,7 @@ class EditDriverGUI:
             self.save_button.config(bg='#FF0000', text='Invalid input')
             self.name_field.config(bg='#FF0000')
             self.window.after(2000, restore_elements)
-            return
+            return False
 
         # Change values in driver info to selected values in the GUI
         driver_info['racerName'] = name
@@ -754,13 +754,19 @@ class EditDriverGUI:
         driver_info['helmet'] = helmet
         driver_info['helmetLivery'] = helmetlivery
 
+        # Update values in replay, set changed flag to False and remember values
         self.replay.change_driver_info(self.id, driver_info)
         self.changed = False
+        self.saved_name = name
+        self.saved_color_suit = self.suit_color.get_colors()
+        self.saved_color_helmet = self.helmet_color.get_colors()
         self.parent.set_changed()
 
         # Change color and text of button
         self.save_button.config(bg='#00FF00', text='Changes saved')
         self.window.after(2000, restore_elements)
+
+        return True
 
     def set_changed(self, event=None):
         # Set changed flag to True
@@ -777,7 +783,10 @@ class EditDriverGUI:
             if save is None:  # Cancel selected
                 return
             elif save:  # Yes selected
-                self.save()
+                saved = self.save()
+                # Don't destroy the window if there has been illegal input
+                if not saved:
+                    return
             else:  # No selected
                 pass
         self.window.destroy()
@@ -989,9 +998,9 @@ class EditCarGUI:
         # Set the selected values to the current values out of the replay file
         self.load_current_values(self.car_info)
 
-        # Set changed flag to False and remember number value
+        # Set changed flag to False and remember number and color values
         self.saved_number = number
-        self.saved_car_color = self.car_color
+        self.saved_car_color = self.car_color.get_colors()
         self.changed = False
 
     def load_current_values(self, car_info):
@@ -1045,7 +1054,7 @@ class EditCarGUI:
             self.save_button.config(bg='#FF0000', text='Invalid input')
             self.number_field.config(bg='#FF0000')
             self.window.after(2000, restore_elements)
-            return
+            return False
         number = int(number)
 
         # Get values for replay file
@@ -1058,13 +1067,18 @@ class EditCarGUI:
         car_info['vehicle'] = vehicle
         car_info['vehicleLivery'] = vehiclelivery
 
+        # Update values in replay, set changed flag to False and remember values
         self.replay.change_car_info(self.id, car_info)
         self.changed = False
+        self.saved_number = number
+        self.saved_car_color = car_colors
         self.parent.set_changed()
 
         # Change color and text of button
         self.save_button.config(bg='#00FF00', text='Changes saved')
         self.window.after(2000, restore_elements)
+
+        return True
 
     def set_changed(self, event=None):
         # Set changed flag to True
@@ -1073,14 +1087,17 @@ class EditCarGUI:
     def close_window(self):
         # Check if there have been changes
         # If so, ask if they should be saved
-        if (self.changed or self.saved_number != self.number_field.get() or
-                self.saved_car_color != self.car_color):
+        if (self.changed or str(self.saved_number) != self.number_field.get() or
+                self.saved_car_color != self.car_color.get_colors()):
             save = messagebox.askyesnocancel(
                 'Save changes?', 'Do you want to save your changes?')
             if save is None:  # Cancel selected
                 return
             elif save:  # Yes selected
-                self.save()
+                saved = self.save()
+                # Don't destroy the window if there has been illegal input
+                if not saved:
+                    return
             else:  # No selected
                 pass
         self.window.destroy()
