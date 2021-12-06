@@ -492,41 +492,39 @@ class EditDriverGUI:
 
     # Suit
     # Values for GUI
-    suit_body = ['Female', 'Male']
-    suit_design = ['Asymmetric', 'Classic', 'Dragon', 'Honor', 'Oil', 'Roads',
-                   'Royal', 'Satelite', 'Sidelines', 'Slick', 'Split',
-                   'Stripes']
+    suit_body = ['Female', 'Male', 'Stig Female', 'Stig Male']
+    suit_design = {
+        'Female': ['Sidelines', 'Classic', 'Royal', 'Satelite', 'Stripes'],
+        'Male': ['Sidelines', 'Classic', 'Royal', 'Satelite', 'Stripes'],
+        'Stig Female': ['Stig'],
+        'Stig Male': ['Stig']
+    }
     # Values for replay file
     suit_driverskin = {'Female': 'driverskin-classic-f',
-                       'Male': 'driverskin-classic-m'}
+                       'Male': 'driverskin-classic-m',
+                       'Stig Female': 'driverskin-trivia-f',
+                       'Stig Male': 'driverskin-trivia-m'
+                       }
     suit_driverskinlivery = {
         'Female': {
-            'Asymmetric': 'driverskinmaterial-asymmetric-f-1',
+            'Sidelines': 'driverskinmaterial-10-f-1',
             'Classic': 'driverskinmaterial-classic-f-0',
-            'Dragon': 'driverskinmaterial-arrows-f-2',
-            'Honor': 'driverskinmaterial-9-f-1',
-            'Oil': 'driverskinmaterial-oil-f-3',
-            'Roads': 'driverskinmaterial-7-f-1',
             'Royal': 'driverskinmaterial-diagonals-f-1',
             'Satelite': 'driverskinmaterial-satellite-f-3',
-            'Sidelines': 'driverskinmaterial-10-f-1',
-            'Slick': 'driverskinmaterial-6-f-1',
-            'Split': 'driverskinmaterial-split-f-1',
             'Stripes': 'driverskinmaterial-stripes-f-1'
         },
         'Male': {
-            'Asymmetric': 'driverskinmaterial-asymmetric-m-1',
+            'Sidelines': 'driverskinmaterial-10-m-1',
             'Classic': 'driverskinmaterial-classic-m-0',
-            'Dragon': 'driverskinmaterial-arrows-m-2',
-            'Honor': 'driverskinmaterial-9-m-1',
-            'Oil': 'driverskinmaterial-oil-m-3',
-            'Roads': 'driverskinmaterial-7-m-1',
             'Royal': 'driverskinmaterial-diagonals-m-1',
             'Satelite': 'driverskinmaterial-satellite-m-3',
-            'Sidelines': 'driverskinmaterial-10-m-1',
-            'Slick': 'driverskinmaterial-6-m-1',
-            'Split': 'driverskinmaterial-split-m-1',
             'Stripes': 'driverskinmaterial-stripes-m-1'
+        },
+        'Stig Female': {
+            'Stig': 'driverskinmaterial-trivia-f-1'
+        },
+        'Stig Male': {
+            'Stig': 'driverskinmaterial-trivia-m-1'
         }
     }
     # Reverse to get the GUI values from the replay value
@@ -537,27 +535,39 @@ class EditDriverGUI:
 
     # Helmet
     # Values for GUI
-    helmet_helmet = ['Classic', 'Modern', 'Ace']
+    helmet_helmet = ['Ace', 'Legacy', 'Classic', 'Stig']
     helmet_design = {
-        'Classic': ['Simple', 'Parallel', 'Classic', 'Vintage'],
-        'Modern': ['Simple', 'Space', 'Trace', 'Belts', 'Arrow', 'Eyes',
+        'Ace': ['Simple', 'Layers', 'Zoom', 'Cirrus', 'Abstract', 'Demon',
+                'Headband', 'Blade', 'Iron', 'Model', 'Apex', 'Cat'],
+        'Legacy': ['Simple', 'Space', 'Trace', 'Belts', 'Arrow', 'Eyes',
                    'Banner', 'Gradient', 'Jaw', 'Apex'],
-        'Ace': ['Simple', 'Layers', 'Abstract', 'Demon', 'Headband', 'Blade']
+        'Classic': ['Simple', 'Parallel', 'Classic', 'Vintage', 'Serio',
+                    'Curva', 'Knight'],
+        'Stig': ['Default']
     }
     # Values for replay file
     helmet_helmet_value = {
-        'Classic': 'helmet-0-classic-open-face',
-        'Modern': 'helmet-1-modern-full-face',
-        'Ace': 'helmet-2-contemporary-full-face'
+        'Ace': 'helmet-0-contemporary-full-face',
+        'Legacy': 'helmet-1-modern-full-face',
+        'Classic': 'helmet-2-classic-open-face',
+        'Stig': 'helmet-3-contemporary-trivia'
     }
     helmet_helmetlivery = {
-        'Classic': {
-            'Simple': 'helmetmaterial-classic-open-face-0',
-            'Parallel': 'helmetmaterial-classic-open-face-1',
-            'Classic': 'helmetmaterial-classic-open-face-2',
-            'Vintage': 'helmetmaterial-classic-open-face-3'
+        'Ace': {
+            'Simple': 'helmetmaterial-contemporary-full-face-0',
+            'Layers': 'helmetmaterial-contemporary-full-face-1',
+            'Zoom': 'helmetmaterial-contemporary-full-face-10',
+            'Cirrus': 'helmetmaterial-contemporary-full-face-11',
+            'Abstract': 'helmetmaterial-contemporary-full-face-2',
+            'Demon': 'helmetmaterial-contemporary-full-face-3',
+            'Headband': 'helmetmaterial-contemporary-full-face-4',
+            'Blade': 'helmetmaterial-contemporary-full-face-5',
+            'Iron': 'helmetmaterial-contemporary-full-face-6',
+            'Model': 'helmetmaterial-contemporary-full-face-7',
+            'Apex': 'helmetmaterial-contemporary-full-face-8',
+            'Cat': 'helmetmaterial-contemporary-full-face-9'
         },
-        'Modern': {
+        'Legacy': {
             'Simple': 'helmetmaterial-modern-full-face-0',
             'Space': 'helmetmaterial-modern-full-face-1',
             'Trace': 'helmetmaterial-modern-full-face-2',
@@ -569,13 +579,17 @@ class EditDriverGUI:
             'Jaw': 'helmetmaterial-modern-full-face-8',
             'Apex': 'helmetmaterial-modern-full-face-9'
         },
-        'Ace': {
-            'Simple': 'helmetmaterial-contemporary-full-face-0',
-            'Layers': 'helmetmaterial-contemporary-full-face-1',
-            'Abstract': 'helmetmaterial-contemporary-full-face-2',
-            'Demon': 'helmetmaterial-contemporary-full-face-3',
-            'Headband': 'helmetmaterial-contemporary-full-face-4',
-            'Blade': 'helmetmaterial-contemporary-full-face-5'
+        'Classic': {
+            'Simple': 'helmetmaterial-classic-open-face-0',
+            'Parallel': 'helmetmaterial-classic-open-face-1',
+            'Classic': 'helmetmaterial-classic-open-face-2',
+            'Vintage': 'helmetmaterial-classic-open-face-3',
+            'Serio': 'helmetmaterial-classic-open-face-4',
+            'Curva': 'helmetmaterial-classic-open-face-5',
+            'Knight': 'helmetmaterial-classic-open-face-6'
+        },
+        'Stig': {
+            'Default': 'helmetmaterial-contemporary-pig-0'
         }
     }
     # Reverse to get the GUI values from the replay value
@@ -622,8 +636,8 @@ class EditDriverGUI:
         self.body_dd = ttk.Combobox(self.window, values=self.suit_body,
                                     exportselection=False)
         self.body_dd.grid(column=1, row=2, sticky='nesw')
-        self.body_dd.bind('<<ComboboxSelected>>', self.set_changed)
-        self.suit_design_dd = ttk.Combobox(self.window, values=self.suit_design)
+        self.body_dd.bind('<<ComboboxSelected>>', self.body_selected)
+        self.suit_design_dd = ttk.Combobox(self.window, values=[])
         self.suit_design_dd.grid(column=2, row=2, sticky='nesw')
         self.suit_design_dd.bind('<<ComboboxSelected>>', self.set_changed)
         self.suit_color = ColorPalette(self.window, 3)
@@ -677,10 +691,15 @@ class EditDriverGUI:
             helmet_curr, helmet_design_curr = None, None
 
         # Suit body and design
-        if body_curr in self.suit_body and body_design_curr in self.suit_design:
+        # Set selected body first, then update values from design
+        if body_curr in self.suit_body:
             self.body_dd.current(self.suit_body.index(body_curr))
-            self.suit_design_dd.current(
-                self.suit_design.index(body_design_curr))
+            self.body_selected()  # Load values for second dropdown box
+            if body_design_curr in self.suit_design[body_curr]:
+                self.suit_design_dd.current(
+                    self.suit_design[body_curr].index(body_design_curr))
+            else:
+                self.suit_design_dd.current(0)
         else:
             self.body_dd.current(0)
             self.suit_design_dd.current(0)
@@ -694,8 +713,7 @@ class EditDriverGUI:
             self.helmet_selected()  # Load values for second dropdown box
             if helmet_design_curr in self.helmet_design[helmet_curr]:
                 self.helmet_design_dd.current(
-                    self.helmet_design[helmet_curr].index(
-                        helmet_design_curr))
+                    self.helmet_design[helmet_curr].index(helmet_design_curr))
             else:
                 self.helmet_design_dd.current(0)
         else:
@@ -706,11 +724,19 @@ class EditDriverGUI:
                          helmet_colors[4], helmet_colors[5]]
         self.helmet_color.set_colors(helmet_colors)
 
+    def body_selected(self, event=None):
+        # Executed when the body dropdown box is selected
+        # Load the correct values in the second dropdown box
+        body = self.body_dd.get()
+        self.suit_design_dd.config(values=self.suit_design[body])
+        self.suit_design_dd.current(0)
+        self.set_changed()
+
     def helmet_selected(self, event=None):
         # Executed when the helmet dropdown box is selected
         # Load the correct values in the second dropdown box
-        body = self.helmet_dd.get()
-        self.helmet_design_dd.config(values=self.helmet_design[body])
+        helmet = self.helmet_dd.get()
+        self.helmet_design_dd.config(values=self.helmet_design[helmet])
         self.helmet_design_dd.current(0)
         self.set_changed()
 
@@ -805,98 +831,69 @@ class EditCarGUI:
 
     # Car
     # Values for GUI
-    car_car = ['Agitator', 'Bonk', 'Conquest', 'Feather', 'Loose Cannon',
-               'Mantra', 'Osprey', 'Panther', 'Piccino', 'Vost']
+    car_car = ['Agitator', 'Brusso', 'Osprey', 'Mantra', 'Piccino', 'Bonk',
+               'Storm', 'Panther', 'Conquest', 'Vost', 'Feather', 'Loose Cannon']
     car_design = {
-        'Agitator': ['Factory', 'Blocks', 'Groove', 'Arrow', 'Boulder',
-                     'Highway'],
-        'Bonk': ['Factory', 'Tour', 'Bonk', 'Duo', 'Escalator', 'Cyclops'],
-        'Conquest': ['Factory', 'Myth', 'Demonic', 'Livery 4', 'Livery 5',
-                     'Livery 6', 'Livery 7', 'Livery 8'],
-        'Feather': ['Factory', 'Classic', 'Prince', 'Vintage', 'Cara', 'Knight',
-                    'Livery 7'],
-        'Loose Cannon': ['Factory', 'Snake', 'Desert', 'Transform', 'Bumper',
-                         'Fine', 'Rear', 'Vintage', 'Livery 9'],
-        'Mantra': ['Factory', 'Pro', 'Radiant', 'Ferocce', 'Slick', 'Layers',
-                   'Triangle', 'Modern', 'Livery 9'],
-        'Osprey': ['Factory', 'Forge', 'Dive', 'Faccia', 'Wind', 'Speed',
-                   'Livery 7', 'Livery 8'],
+        'Agitator': ['Factory', 'Blocks', 'Groove', 'Arrow (?)', 'Boulder (?)',
+                     'Highway (?)', 'Bull', 'Livery 8 (?)', 'Bison'],
+        'Brusso': ['Factory', 'Vintage', 'Davanti', 'Livery 4 (?)', 'Classico',
+                   'Wrap'],
+        'Osprey': ['Factory', 'Forge', 'Dive', 'Faccia', 'Wind', 'Speed (?)',
+                   'Warp', 'Livery 8 (?)'],
+        'Mantra': ['Factory', 'Pro', 'Radiant', 'Ferocce (?)', 'Slick (?)',
+                   'Layers (?)', 'Triangle (?)', 'Modern (?)', 'Livery 9 (?)'],
+        'Piccino': ['Factory', 'Classic', 'Trace', 'Livery 4 (?)', 'Concept',
+                    'Livery 6 (?)', 'Livery 7 (?)', 'Livery 8 (?)', 'Gift (?)'],
+        'Bonk': ['Factory', 'Tour', 'Bonk (?)', 'Duo', 'Escalator', 'Cyclops',
+                 'Livery 7 (?)', 'Rino'],
+        'Storm': ['Factory', 'Suit', 'Legacy', 'Vento', 'Elegance',
+                  'Livery 6 (?)', 'Silk', 'Royal', 'Drive'],
         'Panther': ['Factory', 'Classic', 'Contrast', 'Champion', 'Dagger',
-                    'Abstract', 'Livery 7', 'Uncharted', 'Boost'],
-        'Piccino': ['Factory', 'Classic', 'Trace', 'Livery 4', 'Livery 5',
-                    'Livery 6', 'Livery 7', 'Livery 8', 'Gift'],
-        'Vost': ['Factory', 'Stripes', 'Champion', 'Demon', 'Geometric']
+                    'Abstract (?)', 'Livery 7 (?)', 'Uncharted (?)', 'Boost (?)'],
+        'Conquest': ['Factory', 'Myth', 'Demonic', 'Wave', 'Vite', 'Flame',
+                     'Livery 7 (?)', 'Livery 8 (?)', 'Livery 9 (?)'],
+        'Vost': ['Factory', 'Stripes', 'Champion', 'Demon', 'Geometric (?)',
+                 'Wild', 'Multiverse', 'Livery 8 (?)', 'Dart'],
+        'Feather': ['Factory', 'Classic (?)', 'Prince', 'Vintage (?)', 'Cara',
+                    'Knight (?)', 'Livery 7 (?)'],
+        'Loose Cannon': ['Factory', 'Snake (?)', 'Desert', 'Transform (?)',
+                         'Bumper (?)', 'Fine', 'Rear (?)', 'Vintage',
+                         'Livery 9 (?)']
     }
     # Values for replay file
     car_vehicle = {
         'Agitator': '4x4-agitator',
-        'Bonk': 'eurotruck-geiger',
-        'Conquest': 'prototype-conquest',
-        'Feather': 'superlights-feather',
-        'Loose Cannon': 'trans-am-generic',
-        'Mantra': '80s-gp-generic',
+        'Brusso': '50s-gt-brusso',
         'Osprey': '60s-gp-osprey',
-        'Panther': 'gt-panther',
+        'Mantra': '80s-gp-generic',
         'Piccino': 'bambino-cup-bambino',
-        'Vost': 'rally-vost'
+        'Bonk': 'eurotruck-geiger',
+        'Storm': 'gp-spectre',
+        'Panther': 'gt-panther',
+        'Conquest': 'prototype-conquest',
+        'Vost': 'rally-vost',
+        'Feather': 'superlights-feather',
+        'Loose Cannon': 'trans-am-generic'
     }
     car_vehiclelivery = {
         'Agitator': {
             'Factory': 'vehiclematerial-4x4-agitator-0',
             'Blocks': 'vehiclematerial-4x4-alligator-1',
             'Groove': 'vehiclematerial-4x4-alligator-2',
-            'Arrow': 'vehiclematerial-4x4-alligator-3',
-            'Boulder': 'vehiclematerial-4x4-alligator-4',
-            'Highway': 'vehiclematerial-4x4-alligator-5'
+            'Arrow (?)': 'vehiclematerial-4x4-alligator-3',
+            'Boulder (?)': 'vehiclematerial-4x4-alligator-4',
+            'Highway (?)': 'vehiclematerial-4x4-alligator-5',
+            'Bull': 'vehiclematerial-4x4-alligator-6',
+            'Livery 8 (?)': 'vehiclematerial-4x4-alligator-7',
+            'Bison': 'vehiclematerial-4x4-alligator-8'
         },
-        'Bonk': {
-            'Factory': 'vehiclematerial-eurotruck-geiger-0',
-            'Tour': 'vehiclematerial-eurotruck-geiger-1',
-            'Bonk': 'vehiclematerial-eurotruck-geiger-2',
-            'Duo': 'vehiclematerial-eurotruck-geiger-3',
-            'Escalator': 'vehiclematerial-eurotruck-geiger-4',
-            'Cyclops': 'vehiclematerial-eurotruck-geiger-5'
-        },
-        'Conquest': {
-            'Factory': 'vehiclematerial-prototype-conquest-0',
-            'Myth': 'vehiclematerial-prototype-conquest-1',
-            'Demonic': 'vehiclematerial-prototype-conquest-2',
-            'Livery 4': 'vehiclematerial-prototype-conquest-3',
-            'Livery 5': 'vehiclematerial-prototype-conquest-4',
-            'Livery 6': 'vehiclematerial-prototype-conquest-5',
-            'Livery 7': 'vehiclematerial-prototype-conquest-6',
-            'Livery 8': 'vehiclematerial-prototype-conquest-7',
-        },
-        'Feather': {
-            'Factory': 'vehiclematerial-superlights-feather-0',
-            'Classic': 'vehiclematerial-superlights-feather-1',
-            'Prince': 'vehiclematerial-superlights-feather-2',
-            'Vintage': 'vehiclematerial-superlights-feather-3',
-            'Cara': 'vehiclematerial-superlights-feather-4',
-            'Knight': 'vehiclematerial-superlights-feather-5',
-            'Livery 7': 'vehiclematerial-superlights-feather-6',
-        },
-        'Loose Cannon': {
-            'Factory': 'vehiclematerial-trans-am-generic-0',
-            'Snake': 'vehiclematerial-trans-am-generic-1',
-            'Desert': 'vehiclematerial-trans-am-generic-2',
-            'Transform': 'vehiclematerial-trans-am-generic-3',
-            'Bumper': 'vehiclematerial-trans-am-generic-4',
-            'Fine': 'vehiclematerial-trans-am-generic-5',
-            'Rear': 'vehiclematerial-trans-am-generic-6',
-            'Vintage': 'vehiclematerial-trans-am-generic-7',
-            'Livery 9': 'vehiclematerial-trans-am-generic-8'
-        },
-        'Mantra': {
-            'Factory': 'vehiclematerial-80s-gp-generic-0',
-            'Pro': 'vehiclematerial-80s-gp-generic-1',
-            'Radiant': 'vehiclematerial-80s-gp-generic-2',
-            'Ferocce': 'vehiclematerial-80s-gp-generic-3',
-            'Slick': 'vehiclematerial-80s-gp-generic-4',
-            'Layers': 'vehiclematerial-80s-gp-generic-5',
-            'Triangle': 'vehiclematerial-80s-gp-generic-6',
-            'Modern': 'vehiclematerial-80s-gp-generic-7',
-            'Livery 9': 'vehiclematerial-80s-gp-generic-8'
+        'Brusso': {
+            'Factory': 'vehiclematerial-50s-gt-brusso-0',
+            'Vintage': 'vehiclematerial-50s-gt-brusso-1',
+            'Davanti': 'vehiclematerial-50s-gt-brusso-2',
+            'Livery 4 (?)': 'vehiclematerial-50s-gt-brusso-3',
+            'Classico': 'vehiclematerial-50s-gt-brusso-4',
+            'Wrap': 'vehiclematerial-50s-gt-brusso-5'
         },
         'Osprey': {
             'Factory': 'vehiclematerial-60s-gp-osprey-0',
@@ -904,9 +901,52 @@ class EditCarGUI:
             'Dive': 'vehiclematerial-60s-gp-osprey-2',
             'Faccia': 'vehiclematerial-60s-gp-osprey-3',
             'Wind': 'vehiclematerial-60s-gp-osprey-4',
-            'Speed': 'vehiclematerial-60s-gp-osprey-5',
-            'Livery 7': 'vehiclematerial-60s-gp-osprey-6',
-            'Livery 8': 'vehiclematerial-60s-gp-osprey-7'
+            'Speed (?)': 'vehiclematerial-60s-gp-osprey-5',
+            'Warp': 'vehiclematerial-60s-gp-osprey-6',
+            'Livery 8 (?)': 'vehiclematerial-60s-gp-osprey-7'
+        },
+        'Mantra': {
+            'Factory': 'vehiclematerial-80s-gp-generic-0',
+            'Pro': 'vehiclematerial-80s-gp-generic-1',
+            'Radiant': 'vehiclematerial-80s-gp-generic-2',
+            'Ferocce (?)': 'vehiclematerial-80s-gp-generic-3',
+            'Slick (?)': 'vehiclematerial-80s-gp-generic-4',
+            'Layers (?)': 'vehiclematerial-80s-gp-generic-5',
+            'Triangle (?)': 'vehiclematerial-80s-gp-generic-6',
+            'Modern (?)': 'vehiclematerial-80s-gp-generic-7',
+            'Livery 9 (?)': 'vehiclematerial-80s-gp-generic-8'
+        },
+        'Piccino': {
+            'Factory': 'vehiclematerial-piccino-cup-0',
+            'Classic': 'vehiclematerial-piccino-cup-1',
+            'Trace': 'vehiclematerial-piccino-cup-2',
+            'Livery 4 (?)': 'vehiclematerial-piccino-cup-3',
+            'Concept': 'vehiclematerial-piccino-cup-4',
+            'Livery 6 (?)': 'vehiclematerial-piccino-cup-5',
+            'Livery 7 (?)': 'vehiclematerial-piccino-cup-6',
+            'Livery 8 (?)': 'vehiclematerial-piccino-cup-7',
+            'Gift (?)': 'vehiclematerial-piccino-cup-8'
+        },
+        'Bonk': {
+            'Factory': 'vehiclematerial-eurotruck-geiger-0',
+            'Tour': 'vehiclematerial-eurotruck-geiger-1',
+            'Bonk (?)': 'vehiclematerial-eurotruck-geiger-2',
+            'Duo': 'vehiclematerial-eurotruck-geiger-3',
+            'Escalator': 'vehiclematerial-eurotruck-geiger-4',
+            'Cyclops': 'vehiclematerial-eurotruck-geiger-5',
+            'Livery 7 (?)': 'vehiclematerial-eurotruck-geiger-6',
+            'Rino': 'vehiclematerial-eurotruck-geiger-7'
+        },
+        'Storm': {
+            'Factory': 'vehiclematerial-gp-spectre-0',
+            'Suit': 'vehiclematerial-gp-spectre-1',
+            'Legacy': 'vehiclematerial-gp-spectre-2',
+            'Vento': 'vehiclematerial-gp-spectre-3',
+            'Elegance': 'vehiclematerial-gp-spectre-4',
+            'Livery 6 (?)': 'vehiclematerial-gp-spectre-5',
+            'Silk': 'vehiclematerial-gp-spectre-6',
+            'Royal': 'vehiclematerial-gp-spectre-7',
+            'Drive': 'vehiclematerial-gp-spectre-8'
         },
         'Panther': {
             'Factory': 'vehiclematerial-gt-panther-0',
@@ -914,28 +954,52 @@ class EditCarGUI:
             'Contrast': 'vehiclematerial-gt-panther-2',
             'Champion': 'vehiclematerial-gt-panther-3',
             'Dagger': 'vehiclematerial-gt-panther-4',
-            'Abstract': 'vehiclematerial-gt-panther-5',
-            'Livery 7': 'vehiclematerial-gt-panther-6',
-            'Uncharted': 'vehiclematerial-gt-panther-7',
-            'Boost': 'vehiclematerial-gt-panther-8'
+            'Abstract (?)': 'vehiclematerial-gt-panther-5',
+            'Livery 7 (?)': 'vehiclematerial-gt-panther-6',
+            'Uncharted (?)': 'vehiclematerial-gt-panther-7',
+            'Boost (?)': 'vehiclematerial-gt-panther-8'
         },
-        'Piccino': {
-            'Factory': 'vehiclematerial-piccino-cup-0',
-            'Classic': 'vehiclematerial-piccino-cup-1',
-            'Trace': 'vehiclematerial-piccino-cup-2',
-            'Livery 4': 'vehiclematerial-piccino-cup-3',
-            'Livery 5': 'vehiclematerial-piccino-cup-4',
-            'Livery 6': 'vehiclematerial-piccino-cup-5',
-            'Livery 7': 'vehiclematerial-piccino-cup-6',
-            'Livery 8': 'vehiclematerial-piccino-cup-7',
-            'Gift': 'vehiclematerial-piccino-cup-8'
+        'Conquest': {
+            'Factory': 'vehiclematerial-prototype-conquest-0',
+            'Myth': 'vehiclematerial-prototype-conquest-1',
+            'Demonic': 'vehiclematerial-prototype-conquest-2',
+            'Wave': 'vehiclematerial-prototype-conquest-3',
+            'Vite': 'vehiclematerial-prototype-conquest-4',
+            'Flame': 'vehiclematerial-prototype-conquest-5',
+            'Livery 7 (?)': 'vehiclematerial-prototype-conquest-6',
+            'Livery 8 (?)': 'vehiclematerial-prototype-conquest-7',
+            'Livery 9 (?)': 'vehiclematerial-prototype-conquest-8'
         },
         'Vost': {
             'Factory': 'vehiclematerial-rally-vost-0',
             'Stripes': 'vehiclematerial-rally-vost-1',
             'Champion': 'vehiclematerial-rally-vost-2',
             'Demon': 'vehiclematerial-rally-vost-3',
-            'Geometric': 'vehiclematerial-rally-vost-4'
+            'Geometric (?)': 'vehiclematerial-rally-vost-4',
+            'Wild': 'vehiclematerial-rally-vost-5',
+            'Multiverse': 'vehiclematerial-rally-vost-6',
+            'Livery 8 (?)': 'vehiclematerial-rally-vost-7',
+            'Dart': 'vehiclematerial-rally-vost-8'
+        },
+        'Feather': {
+            'Factory': 'vehiclematerial-superlights-feather-0',
+            'Classic (?)': 'vehiclematerial-superlights-feather-1',
+            'Prince': 'vehiclematerial-superlights-feather-2',
+            'Vintage (?)': 'vehiclematerial-superlights-feather-3',
+            'Cara': 'vehiclematerial-superlights-feather-4',
+            'Knight (?)': 'vehiclematerial-superlights-feather-5',
+            'Livery 7 (?)': 'vehiclematerial-superlights-feather-6'
+        },
+        'Loose Cannon': {
+            'Factory': 'vehiclematerial-trans-am-generic-0',
+            'Snake (?)': 'vehiclematerial-trans-am-generic-1',
+            'Desert': 'vehiclematerial-trans-am-generic-2',
+            'Transform (?)': 'vehiclematerial-trans-am-generic-3',
+            'Bumper (?)': 'vehiclematerial-trans-am-generic-4',
+            'Fine': 'vehiclematerial-trans-am-generic-5',
+            'Rear (?)': 'vehiclematerial-trans-am-generic-6',
+            'Vintage': 'vehiclematerial-trans-am-generic-7',
+            'Livery 9 (?)': 'vehiclematerial-trans-am-generic-8'
         }
     }
     # Reverse to get the GUI values from the replay value
