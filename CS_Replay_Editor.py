@@ -627,10 +627,11 @@ class EditDriverGUI:
         text_skin = tk.Label(self.window, text='Skin')
         text_skin.grid(column=0, row=2, sticky='nesw')
         self.body_dd = ttk.Combobox(self.window, values=self.suit_body,
-                                    exportselection=False)
+                                    state='readonly', exportselection=False)
         self.body_dd.grid(column=1, row=2, sticky='nesw')
         self.body_dd.bind('<<ComboboxSelected>>', self.body_selected)
-        self.suit_design_dd = ttk.Combobox(self.window, values=[])
+        self.suit_design_dd = ttk.Combobox(self.window, values=[],
+                                           state='readonly',)
         self.suit_design_dd.grid(column=2, row=2, sticky='nesw')
         self.suit_design_dd.bind('<<ComboboxSelected>>', self.set_changed)
         self.suit_color = ColorPalette(self.window, 3)
@@ -642,10 +643,11 @@ class EditDriverGUI:
         text_helmet = tk.Label(self.window, text='Helmet')
         text_helmet.grid(column=0, row=3, sticky='nesw')
         self.helmet_dd = ttk.Combobox(self.window, values=self.helmet_helmet,
-                                      exportselection=False)
+                                      state='readonly', exportselection=False)
         self.helmet_dd.grid(column=1, row=3, sticky='nesw')
         self.helmet_dd.bind('<<ComboboxSelected>>', self.helmet_selected)
-        self.helmet_design_dd = ttk.Combobox(self.window, values=[])
+        self.helmet_design_dd = ttk.Combobox(self.window, values=[],
+                                             state='readonly')
         self.helmet_design_dd.grid(column=2, row=3, sticky='nesw')
         self.helmet_design_dd.bind('<<ComboboxSelected>>', self.set_changed)
         self.helmet_color = ColorPalette(self.window, 5)
@@ -1007,10 +1009,11 @@ class EditCarGUI:
         text_car = tk.Label(self.window, text='Car')
         text_car.grid(column=0, row=1, sticky='nesw')
         self.car_dd = ttk.Combobox(self.window, values=self.car_car,
-                                   exportselection=False)
+                                   state='readonly', exportselection=False)
         self.car_dd.grid(column=1, row=1, sticky='nesw')
         self.car_dd.bind('<<ComboboxSelected>>', self.car_selected)
-        self.car_design_dd = ttk.Combobox(self.window, values=[])
+        self.car_design_dd = ttk.Combobox(self.window, values=[],
+                                          state='readonly',)
         self.car_design_dd.grid(column=2, row=1, sticky='nesw')
         self.car_design_dd.bind('<<ComboboxSelected>>', self.set_changed)
         self.car_color = ColorPalette(self.window, 4)
