@@ -491,14 +491,6 @@ class EditDriverGUI:
     # Might be incomplete and can change in future updates of the game
 
     # Suit
-    # Values for GUI
-    suit_body = ['Female', 'Male', 'Stig Female', 'Stig Male']
-    suit_design = {
-        'Female': ['Sidelines', 'Classic', 'Royal', 'Satelite', 'Stripes'],
-        'Male': ['Sidelines', 'Classic', 'Royal', 'Satelite', 'Stripes'],
-        'Stig Female': ['Stig'],
-        'Stig Male': ['Stig']
-    }
     # Values for replay file
     suit_driverskin = {'Female': 'driverskin-classic-f',
                        'Male': 'driverskin-classic-m',
@@ -527,6 +519,12 @@ class EditDriverGUI:
             'Stig': 'driverskinmaterial-trivia-m-1'
         }
     }
+    # Values for GUI
+    suit_body = []
+    suit_design = {}
+    for suit in suit_driverskinlivery:
+        suit_body.append(suit)
+        suit_design[suit] = list(suit_driverskinlivery[suit].keys())
     # Reverse to get the GUI values from the replay value
     inv_driverskinlivery = {}
     for i in suit_driverskinlivery.items():
@@ -534,17 +532,6 @@ class EditDriverGUI:
             inv_driverskinlivery[j[1]] = (i[0], j[0])
 
     # Helmet
-    # Values for GUI
-    helmet_helmet = ['Ace', 'Legacy', 'Classic', 'Stig']
-    helmet_design = {
-        'Ace': ['Simple', 'Layers', 'Zoom', 'Cirrus', 'Abstract', 'Demon',
-                'Headband', 'Blade', 'Iron', 'Model', 'Apex', 'Cat'],
-        'Legacy': ['Simple', 'Space', 'Trace', 'Belts', 'Arrow', 'Eyes',
-                   'Banner', 'Gradient', 'Jaw', 'Apex'],
-        'Classic': ['Simple', 'Parallel', 'Classic', 'Vintage', 'Serio',
-                    'Curva', 'Knight'],
-        'Stig': ['Default']
-    }
     # Values for replay file
     helmet_helmet_value = {
         'Ace': 'helmet-0-contemporary-full-face',
@@ -592,6 +579,12 @@ class EditDriverGUI:
             'Default': 'helmetmaterial-contemporary-pig-0'
         }
     }
+    # Values for GUI
+    helmet_helmet = []
+    helmet_design = {}
+    for helmet in helmet_helmetlivery:
+        helmet_helmet.append(helmet)
+        helmet_design[helmet] = list(helmet_helmetlivery[helmet].keys())
     # Reverse to get the GUI values from the replay value
     inv_helmetlivery = {}
     for i in helmet_helmetlivery.items():
@@ -830,36 +823,6 @@ class EditCarGUI:
     # Thanks to Kikwik for helping me gather the design names
 
     # Car
-    # Values for GUI
-    car_car = ['Agitator', 'Brusso', 'Osprey', 'Mantra', 'Piccino', 'Bonk',
-               'Storm', 'Panther', 'Conquest', 'Vost', 'Feather', 'Loose Cannon']
-    car_design = {
-        'Agitator': ['Factory', 'Blocks', 'Groove', 'Arrow (?)', 'Boulder (?)',
-                     'Highway (?)', 'Bull', 'Livery 8 (?)', 'Bison'],
-        'Brusso': ['Factory', 'Vintage', 'Davanti', 'Livery 4 (?)', 'Classico',
-                   'Wrap'],
-        'Osprey': ['Factory', 'Forge', 'Dive', 'Faccia', 'Wind', 'Speed (?)',
-                   'Warp', 'Livery 8 (?)'],
-        'Mantra': ['Factory', 'Pro', 'Radiant', 'Ferocce (?)', 'Slick (?)',
-                   'Layers (?)', 'Triangle (?)', 'Modern (?)', 'Livery 9 (?)'],
-        'Piccino': ['Factory', 'Classic', 'Trace', 'Livery 4 (?)', 'Concept',
-                    'Livery 6 (?)', 'Livery 7 (?)', 'Livery 8 (?)', 'Gift (?)'],
-        'Bonk': ['Factory', 'Tour', 'Bonk (?)', 'Duo', 'Escalator', 'Cyclops',
-                 'Livery 7 (?)', 'Rino'],
-        'Storm': ['Factory', 'Suit', 'Legacy', 'Vento', 'Elegance',
-                  'Livery 6 (?)', 'Silk', 'Royal', 'Drive'],
-        'Panther': ['Factory', 'Classic', 'Contrast', 'Champion', 'Dagger',
-                    'Abstract (?)', 'Livery 7 (?)', 'Uncharted (?)', 'Boost (?)'],
-        'Conquest': ['Factory', 'Myth', 'Demonic', 'Wave', 'Vite', 'Flame',
-                     'Livery 7 (?)', 'Livery 8 (?)', 'Livery 9 (?)'],
-        'Vost': ['Factory', 'Stripes', 'Champion', 'Demon', 'Geometric (?)',
-                 'Wild', 'Multiverse', 'Livery 8 (?)', 'Dart'],
-        'Feather': ['Factory', 'Classic (?)', 'Prince', 'Vintage (?)', 'Cara',
-                    'Knight (?)', 'Livery 7 (?)'],
-        'Loose Cannon': ['Factory', 'Snake (?)', 'Desert', 'Transform (?)',
-                         'Bumper (?)', 'Fine', 'Rear (?)', 'Vintage',
-                         'Livery 9 (?)']
-    }
     # Values for replay file
     car_vehicle = {
         'Agitator': '4x4-agitator',
@@ -1002,6 +965,12 @@ class EditCarGUI:
             'Livery 9 (?)': 'vehiclematerial-trans-am-generic-8'
         }
     }
+    # Values for GUI
+    car_car = []
+    car_design = {}
+    for car in car_vehiclelivery:
+        car_car.append(car)
+        car_design[car] = list(car_vehiclelivery[car].keys())
     # Reverse to get the GUI values from the replay value
     inv_vehiclelivery = {}
     for i in car_vehiclelivery.items():
