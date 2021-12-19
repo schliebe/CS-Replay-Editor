@@ -492,24 +492,37 @@ class EditDriverGUI:
 
     # Suit
     # Values for replay file
-    suit_driverskin = {'Female': 'driverskin-classic-f',
-                       'Male': 'driverskin-classic-m',
-                       'Stig Female': 'driverskin-trivia-f',
-                       'Stig Male': 'driverskin-trivia-m'
-                       }
+    suit_driverskin = {
+        'Female': 'driverskin-classic-f',
+        'Male': 'driverskin-classic-m',
+        'Stig Female': 'driverskin-trivia-f',
+        'Stig Male': 'driverskin-trivia-m'
+    }
     suit_driverskinlivery = {
         'Female': {
             'Sidelines': 'driverskinmaterial-10-f-1',
+            'Slick': 'driverskinmaterial-6-f-1',
+            'Roads': 'driverskinmaterial-7-f-1',
+            'Split': 'driverskinmaterial-8-f-1',
+            'Honor': 'driverskinmaterial-9-f-1',
+            'Dragon': 'driverskinmaterial-arrows-f-2',
             'Classic': 'driverskinmaterial-classic-f-0',
             'Royal': 'driverskinmaterial-diagonals-f-1',
             'Satelite': 'driverskinmaterial-satellite-f-3',
+            'Oil': 'driverskinmaterial-split-f-1',
             'Stripes': 'driverskinmaterial-stripes-f-1'
         },
         'Male': {
             'Sidelines': 'driverskinmaterial-10-m-1',
+            'Slick': 'driverskinmaterial-6-m-1',
+            'Roads': 'driverskinmaterial-7-m-1',
+            'Split': 'driverskinmaterial-8-m-1',
+            'Honor': 'driverskinmaterial-9-m-1',
+            'Dragon': 'driverskinmaterial-arrows-m-2',
             'Classic': 'driverskinmaterial-classic-m-0',
             'Royal': 'driverskinmaterial-diagonals-m-1',
             'Satelite': 'driverskinmaterial-satellite-m-3',
+            'Oil': 'driverskinmaterial-split-m-1',
             'Stripes': 'driverskinmaterial-stripes-m-1'
         },
         'Stig Female': {
@@ -837,6 +850,7 @@ class EditCarGUI:
         'Panther': 'gt-panther',
         'Conquest': 'prototype-conquest',
         'Vost': 'rally-vost',
+        'Impact': 'stock-car',
         'Feather': 'superlights-feather',
         'Loose Cannon': 'trans-am-generic'
     }
@@ -868,7 +882,7 @@ class EditCarGUI:
             'Wind': 'vehiclematerial-60s-gp-osprey-4',
             'Speed (?)': 'vehiclematerial-60s-gp-osprey-5',
             'Warp': 'vehiclematerial-60s-gp-osprey-6',
-            'Livery 8 (?)': 'vehiclematerial-60s-gp-osprey-7'
+            'Beam': 'vehiclematerial-60s-gp-osprey-7'
         },
         'Mantra': {
             'Factory': 'vehiclematerial-80s-gp-generic-0',
@@ -878,7 +892,7 @@ class EditCarGUI:
             'Slick (?)': 'vehiclematerial-80s-gp-generic-4',
             'Layers (?)': 'vehiclematerial-80s-gp-generic-5',
             'Triangle (?)': 'vehiclematerial-80s-gp-generic-6',
-            'Modern (?)': 'vehiclematerial-80s-gp-generic-7',
+            'Modern': 'vehiclematerial-80s-gp-generic-7',
             'Livery 9 (?)': 'vehiclematerial-80s-gp-generic-8'
         },
         'Piccino': {
@@ -900,7 +914,7 @@ class EditCarGUI:
             'Escalator': 'vehiclematerial-eurotruck-geiger-4',
             'Cyclops': 'vehiclematerial-eurotruck-geiger-5',
             'Livery 7 (?)': 'vehiclematerial-eurotruck-geiger-6',
-            'Rino': 'vehiclematerial-eurotruck-geiger-7'
+            'Rino': 'vehiclematerial-eurotruck-geiger-7',
         },
         'Storm': {
             'Factory': 'vehiclematerial-gp-spectre-0',
@@ -911,7 +925,8 @@ class EditCarGUI:
             'Livery 6 (?)': 'vehiclematerial-gp-spectre-5',
             'Silk': 'vehiclematerial-gp-spectre-6',
             'Royal': 'vehiclematerial-gp-spectre-7',
-            'Drive': 'vehiclematerial-gp-spectre-8'
+            'Drive': 'vehiclematerial-gp-spectre-8',
+            'Livery 10 (?)': 'vehiclematerial-gp-spectre-9'
         },
         'Panther': {
             'Factory': 'vehiclematerial-gt-panther-0',
@@ -931,7 +946,7 @@ class EditCarGUI:
             'Wave': 'vehiclematerial-prototype-conquest-3',
             'Vite': 'vehiclematerial-prototype-conquest-4',
             'Flame': 'vehiclematerial-prototype-conquest-5',
-            'Livery 7 (?)': 'vehiclematerial-prototype-conquest-6',
+            'Feathers': 'vehiclematerial-prototype-conquest-6',
             'Livery 8 (?)': 'vehiclematerial-prototype-conquest-7',
             'Livery 9 (?)': 'vehiclematerial-prototype-conquest-8'
         },
@@ -945,6 +960,18 @@ class EditCarGUI:
             'Multiverse': 'vehiclematerial-rally-vost-6',
             'Livery 8 (?)': 'vehiclematerial-rally-vost-7',
             'Dart': 'vehiclematerial-rally-vost-8'
+        },
+        'Impact': {
+            'Factory': 'vehiclematerial-stock-car-0',
+            'Livery 2 (?)': 'vehiclematerial-stock-car-1',
+            'Venom': 'vehiclematerial-stock-car-2',
+            'Arrow': 'vehiclematerial-stock-car-3',
+            'Livery 5 (?)': 'vehiclematerial-stock-car-4',
+            'Livery 6 (?)': 'vehiclematerial-stock-car-5',
+            'Livery 7 (?)': 'vehiclematerial-stock-car-6',
+            'Livery 8 (?)': 'vehiclematerial-stock-car-7',
+            'Livery 9 (?)': 'vehiclematerial-stock-car-8',
+            'Livery 10 (?)': 'vehiclematerial-stock-car-9'
         },
         'Feather': {
             'Factory': 'vehiclematerial-superlights-feather-0',
