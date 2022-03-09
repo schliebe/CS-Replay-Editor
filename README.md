@@ -1,6 +1,6 @@
 # CS Replay Editor
 **Editor for Circuit Superstars replay files.**\
-*Version 1.2.0*
+*Version 1.2.1*
 
 ![CS Replay Editor](media/readme_header.gif)
 
@@ -49,6 +49,8 @@ Select the path in which the replay files you want to edit can be found by click
 Note that each replay consists of two files that will always be saved together.
 
 ### Changelog
+#### [1.2.1] - 2022-03-09
+- Added and changed existing names for car designs
 #### [1.2.0] - 2021-12-19
 - Added new car and new designs for cars and suits and their names\
   (Including additions and changes for game version `v.1.2.0`)

@@ -859,11 +859,11 @@ class EditCarGUI:
             'Factory': 'vehiclematerial-4x4-agitator-0',
             'Blocks': 'vehiclematerial-4x4-alligator-1',
             'Groove': 'vehiclematerial-4x4-alligator-2',
-            'Arrow (?)': 'vehiclematerial-4x4-alligator-3',
-            'Boulder (?)': 'vehiclematerial-4x4-alligator-4',
-            'Highway (?)': 'vehiclematerial-4x4-alligator-5',
+            'Arrow': 'vehiclematerial-4x4-alligator-3',
+            'Boulder': 'vehiclematerial-4x4-alligator-4',
+            'Highway': 'vehiclematerial-4x4-alligator-5',
             'Bull': 'vehiclematerial-4x4-alligator-6',
-            'Livery 8 (?)': 'vehiclematerial-4x4-alligator-7',
+            'Galaxy': 'vehiclematerial-4x4-alligator-7',
             'Bison': 'vehiclematerial-4x4-alligator-8'
         },
         'Brusso': {
@@ -880,7 +880,7 @@ class EditCarGUI:
             'Dive': 'vehiclematerial-60s-gp-osprey-2',
             'Faccia': 'vehiclematerial-60s-gp-osprey-3',
             'Wind': 'vehiclematerial-60s-gp-osprey-4',
-            'Speed (?)': 'vehiclematerial-60s-gp-osprey-5',
+            'Speed': 'vehiclematerial-60s-gp-osprey-5',
             'Warp': 'vehiclematerial-60s-gp-osprey-6',
             'Beam': 'vehiclematerial-60s-gp-osprey-7'
         },
@@ -889,31 +889,31 @@ class EditCarGUI:
             'Pro': 'vehiclematerial-80s-gp-generic-1',
             'Radiant': 'vehiclematerial-80s-gp-generic-2',
             'Ferocce (?)': 'vehiclematerial-80s-gp-generic-3',
-            'Slick (?)': 'vehiclematerial-80s-gp-generic-4',
-            'Layers (?)': 'vehiclematerial-80s-gp-generic-5',
+            'Slick': 'vehiclematerial-80s-gp-generic-4',
+            'Layers': 'vehiclematerial-80s-gp-generic-5',
             'Triangle (?)': 'vehiclematerial-80s-gp-generic-6',
             'Modern': 'vehiclematerial-80s-gp-generic-7',
-            'Livery 9 (?)': 'vehiclematerial-80s-gp-generic-8'
+            'Ray': 'vehiclematerial-80s-gp-generic-8'
         },
         'Piccino': {
             'Factory': 'vehiclematerial-piccino-cup-0',
             'Classic': 'vehiclematerial-piccino-cup-1',
             'Trace': 'vehiclematerial-piccino-cup-2',
-            'Livery 4 (?)': 'vehiclematerial-piccino-cup-3',
+            'Play': 'vehiclematerial-piccino-cup-3',
             'Concept': 'vehiclematerial-piccino-cup-4',
             'Livery 6 (?)': 'vehiclematerial-piccino-cup-5',
-            'Livery 7 (?)': 'vehiclematerial-piccino-cup-6',
-            'Livery 8 (?)': 'vehiclematerial-piccino-cup-7',
-            'Gift (?)': 'vehiclematerial-piccino-cup-8'
+            'Dexterous': 'vehiclematerial-piccino-cup-6',
+            'Blocks': 'vehiclematerial-piccino-cup-7',
+            'Gift': 'vehiclematerial-piccino-cup-8'
         },
         'Bonk': {
             'Factory': 'vehiclematerial-eurotruck-geiger-0',
             'Tour': 'vehiclematerial-eurotruck-geiger-1',
-            'Bonk (?)': 'vehiclematerial-eurotruck-geiger-2',
+            'Bonk': 'vehiclematerial-eurotruck-geiger-2',
             'Duo': 'vehiclematerial-eurotruck-geiger-3',
             'Escalator': 'vehiclematerial-eurotruck-geiger-4',
             'Cyclops': 'vehiclematerial-eurotruck-geiger-5',
-            'Livery 7 (?)': 'vehiclematerial-eurotruck-geiger-6',
+            'Swerve': 'vehiclematerial-eurotruck-geiger-6',
             'Rino': 'vehiclematerial-eurotruck-geiger-7',
         },
         'Storm': {
@@ -922,7 +922,7 @@ class EditCarGUI:
             'Legacy': 'vehiclematerial-gp-spectre-2',
             'Vento': 'vehiclematerial-gp-spectre-3',
             'Elegance': 'vehiclematerial-gp-spectre-4',
-            'Livery 6 (?)': 'vehiclematerial-gp-spectre-5',
+            'Impact': 'vehiclematerial-gp-spectre-5',
             'Silk': 'vehiclematerial-gp-spectre-6',
             'Royal': 'vehiclematerial-gp-spectre-7',
             'Drive': 'vehiclematerial-gp-spectre-8',
@@ -935,8 +935,8 @@ class EditCarGUI:
             'Champion': 'vehiclematerial-gt-panther-3',
             'Dagger': 'vehiclematerial-gt-panther-4',
             'Abstract (?)': 'vehiclematerial-gt-panther-5',
-            'Livery 7 (?)': 'vehiclematerial-gt-panther-6',
-            'Uncharted (?)': 'vehiclematerial-gt-panther-7',
+            'Polygon': 'vehiclematerial-gt-panther-6',
+            'Uncharted': 'vehiclematerial-gt-panther-7',
             'Boost (?)': 'vehiclematerial-gt-panther-8'
         },
         'Conquest': {
@@ -955,7 +955,7 @@ class EditCarGUI:
             'Stripes': 'vehiclematerial-rally-vost-1',
             'Champion': 'vehiclematerial-rally-vost-2',
             'Demon': 'vehiclematerial-rally-vost-3',
-            'Geometric (?)': 'vehiclematerial-rally-vost-4',
+            'Geometric': 'vehiclematerial-rally-vost-4',
             'Wild': 'vehiclematerial-rally-vost-5',
             'Multiverse': 'vehiclematerial-rally-vost-6',
             'Livery 8 (?)': 'vehiclematerial-rally-vost-7',
@@ -963,35 +963,35 @@ class EditCarGUI:
         },
         'Impact': {
             'Factory': 'vehiclematerial-stock-car-0',
-            'Livery 2 (?)': 'vehiclematerial-stock-car-1',
+            'Daring': 'vehiclematerial-stock-car-1',
             'Venom': 'vehiclematerial-stock-car-2',
             'Arrow': 'vehiclematerial-stock-car-3',
-            'Livery 5 (?)': 'vehiclematerial-stock-car-4',
+            'Fire': 'vehiclematerial-stock-car-4',
             'Livery 6 (?)': 'vehiclematerial-stock-car-5',
             'Livery 7 (?)': 'vehiclematerial-stock-car-6',
             'Livery 8 (?)': 'vehiclematerial-stock-car-7',
             'Livery 9 (?)': 'vehiclematerial-stock-car-8',
-            'Livery 10 (?)': 'vehiclematerial-stock-car-9'
+            'Slick': 'vehiclematerial-stock-car-9'
         },
         'Feather': {
             'Factory': 'vehiclematerial-superlights-feather-0',
-            'Classic (?)': 'vehiclematerial-superlights-feather-1',
+            'Classic': 'vehiclematerial-superlights-feather-1',
             'Prince': 'vehiclematerial-superlights-feather-2',
-            'Vintage (?)': 'vehiclematerial-superlights-feather-3',
+            'Vintage': 'vehiclematerial-superlights-feather-3',
             'Cara': 'vehiclematerial-superlights-feather-4',
-            'Knight (?)': 'vehiclematerial-superlights-feather-5',
-            'Livery 7 (?)': 'vehiclematerial-superlights-feather-6'
+            'Knight': 'vehiclematerial-superlights-feather-5',
+            'Timeless': 'vehiclematerial-superlights-feather-6'
         },
         'Loose Cannon': {
             'Factory': 'vehiclematerial-trans-am-generic-0',
             'Snake (?)': 'vehiclematerial-trans-am-generic-1',
             'Desert': 'vehiclematerial-trans-am-generic-2',
-            'Transform (?)': 'vehiclematerial-trans-am-generic-3',
-            'Bumper (?)': 'vehiclematerial-trans-am-generic-4',
+            'Transform': 'vehiclematerial-trans-am-generic-3',
+            'Bumper': 'vehiclematerial-trans-am-generic-4',
             'Fine': 'vehiclematerial-trans-am-generic-5',
-            'Rear (?)': 'vehiclematerial-trans-am-generic-6',
+            'Rear': 'vehiclematerial-trans-am-generic-6',
             'Vintage': 'vehiclematerial-trans-am-generic-7',
-            'Livery 9 (?)': 'vehiclematerial-trans-am-generic-8'
+            'Velo': 'vehiclematerial-trans-am-generic-8'
         }
     }
     # Values for GUI
